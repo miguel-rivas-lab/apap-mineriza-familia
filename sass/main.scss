@@ -1,0 +1,763 @@
+$sansFont: helvetica, sans-serif, verdana;
+$customFont: 'Montserrat', $sansFont;
+
+$yellowBrand: #f4d242;
+
+$buttonBackground: $yellowBrand;
+$buttonTextColor: #0168b3;
+
+
+aside
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #3C81C1 url(../img/cargando.png) center no-repeat;
+	z-index: 99;
+}
+
+/* preloader*/
+
+@font-face
+{
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icon
+{
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	&.hair:before { content: "\e900"; }
+	&.skin:before { content: "\e901"; }
+	&.eyes:before { content: "\e902"; }
+	&.nose:before { content: "\e903"; }
+	&.mouth:before { content: "\e904"; }
+	&.pet:before {	content: "\e905"; }
+	&.male:before {	content: "\e906"; }
+	&.female:before { content: "\e907"; }
+	&.baby:before { content: "\e908"; }
+	&.triangle-left:before { content: "\f044"; }
+	&.triangle-right:before { content: "\f05a"; }
+	&.undo2:before { content: "\e909"; }
+	&.arrow-left:before { content: "\e90a"; }
+	&.chevron-down:before { content: "\f0a3"; }
+	&.chevron-left:before {	content: "\f0a4"; }
+	&.chevron-right:before { content: "\f078"; }
+	&.chevron-up:before { content: "\f0a2";	}
+}
+
+$lighBlue: #41afd7;
+$darkBlue: #1f67ac;
+
+body,
+html
+{
+	padding: 0;
+	margin: 0;
+	background-color: #{$darkBlue};
+}
+
+main
+{
+	background-color: #{$darkBlue};
+	font-family: $customFont;
+	text-align: center;
+	background: -webkit-radial-gradient(#{$lighBlue}, #{$darkBlue} 70%);
+	background: -o-radial-gradient(#{$lighBlue}, #{$darkBlue} 70%);
+	background: -moz-radial-gradient(#{$lighBlue}, #{$darkBlue} 70%);
+	background: radial-gradient(#{$lighBlue}, #{$darkBlue} 70%);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+a
+{
+	text-decoration: none;
+	color: inherit;
+	transition: 500ms;
+	cursor: pointer;
+}
+
+button, .btn
+{
+	cursor: pointer;
+	transition: 500ms;
+	border: none;
+	outline: none;
+}
+
+h1
+{
+	color: #fff;
+	font-weight: 700;
+	letter-spacing: 1pt;
+	font-size: 44pt;
+}
+
+p
+{
+	color: #fff;
+	font-weight: 400;
+	letter-spacing: 1pt;
+	font-size: 19pt;
+	margin: 0;
+}
+
+small
+{
+	color: #124c83;
+	font-size: 12pt;
+	letter-spacing: 1pt;
+	display: block;
+	margin: 8px;
+}
+
+strong
+{
+	color: $yellowBrand;
+	font-size: 39pt;
+	display: block;
+}
+
+header
+{
+	position: absolute;
+	top: 20px;
+	right: 0;
+}
+
+section
+{
+	padding-top: 270px;
+	padding-bottom: 90px;
+	display: none;
+	width: 90%;
+	margin: auto;
+	&.active
+	{
+		display: block;
+	}
+}
+
+/* -------------------- class */
+
+.btn
+{
+	font: 700 14pt $customFont;
+	background: $buttonBackground;
+	width: 130px;
+	display: inline-block;
+	margin: 50px 8px 0;
+	padding: 10px;
+	color: $buttonTextColor;
+	border: none;
+	box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.15);
+
+	&:hover
+	{
+		background-color: #fff;
+	}
+}
+
+/* -------------------- sections */
+
+#home
+{
+	img
+	{
+		position: fixed;
+		bottom: -100%;
+		right: 5%;
+		width: 95%;
+		z-index: -1;
+	}
+
+	h1
+	{
+		max-width: 570px;
+		margin: auto;
+	}
+
+	.info
+	{
+		display: none;
+	}
+}
+
+#form
+{
+	form
+	{
+		margin-top: 50px;
+	}
+
+	p
+	{
+		max-width: 500px;
+		margin: auto;
+	}
+	label
+	{
+		font-size: 0;
+		display: block;
+		margin: 20px;
+		letter-spacing: 1pt;
+	}
+	span
+	{
+		font-size: 11pt;
+		background: #1461aa;
+		color: $yellowBrand;
+		text-transform: capitalize;
+		display: inline-block;
+		width: 140px;
+		padding: 8px 0;
+	}
+	input[type="text"]
+	{
+		font-size: 11pt;
+		padding: 8px;
+		border: none;
+		width: 275px;
+		outline-color: $yellowBrand;
+		letter-spacing: 1pt;
+	}
+}
+
+#choose
+{
+	.characters
+	{
+		margin-top: 30px;
+		button
+		{
+			background: transparent;
+			color: $yellowBrand;
+			font-size: 110pt;
+			text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+			text-align: center;
+
+
+
+			&:hover
+			{
+				text-shadow: 1px 0px 2px rgba(0, 0, 0, 0.25);
+				color: #42a3dc;
+			}
+
+			&.male,
+			&.woman
+			{
+				width: 68px;
+				&:before
+				{
+					margin-left: -45px;
+				}
+			}
+
+			&.baby,
+			&.pet
+			{
+				width: 88px;
+				height: 129px;
+				vertical-align: bottom;
+				&:before
+				{
+					margin-left: -35px;
+				}
+			}
+		}
+	}
+}
+
+.box
+{
+	display: inline-block;
+	max-width: 500px;
+	vertical-align: top;
+}
+
+.edit
+{
+
+	.avatar
+	{
+		margin-top: -80px;
+		width: 350px;
+		height: 600px;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		position: relative;
+
+		img
+		{
+			position: absolute;
+			z-index: 3;
+		}
+	}
+
+	&.male.old .avatar
+	{
+		.hair
+		{
+			top: 3px;
+			left: 92px;
+		}
+
+		.eyes
+		{
+			top: 80px;
+			left: 114px;
+		}
+
+		.nose
+		{
+			top: 104px;
+			left: 127px;
+		}
+
+		.mouth
+		{
+			top: 135px;
+			left: 132px;
+		}
+		.skin
+		{
+			top: 82px;
+			left: 85px;
+			z-index: 0;
+		}		
+	}
+
+	&.male.teen .avatar
+	{
+		$translateY: 72;
+		.hair
+		{
+			top: 13px + $translateY;
+			left: 94px;
+		}
+
+		.eyes
+		{
+			top: 73px + $translateY;
+			left: 99px;
+		}
+
+		.nose
+		{
+			top: 107px + $translateY;
+			left: 123px;
+		}
+
+		.mouth
+		{
+			top: 145px + $translateY;
+			left: 132px;
+		}
+		.skin
+		{
+			top: 82px + $translateY;
+			left: 85px;
+			z-index: 0;
+		}		
+	}
+
+	&.male.child .avatar
+	{
+		.hair
+		{
+			top: 224px;
+			left: 89px;
+		}
+
+		.eyes
+		{
+			top: 301px;
+			left: 114px;
+		}
+
+		.nose
+		{
+			top: 328px;
+			left: 128px;
+		}
+
+		.mouth
+		{
+			top: 356px;
+			left: 138px;
+		}
+		.skin
+		{
+			top: 292px;
+			left: 90px;
+			z-index: 0;
+		}
+	}
+
+	&.female.old .avatar
+	{
+		.hair
+		{
+			top: 10px;
+			left: 60px;
+		}
+
+		.eyes
+		{
+			top: 67px;
+			left: 114px;
+		}
+
+		.nose
+		{
+			top: 92px;
+			left: 125px;
+		}
+
+		.mouth
+		{
+			top: 127px;
+			left: 134px;
+		}
+		.tool
+		{
+			top: 196px;
+			left: 131px;
+		}
+		.skin
+		{
+			top: 63px;
+			left: 85px;
+			z-index: 0;
+		}		
+	}
+
+	&.female.teen .avatar
+	{
+		$translateY: 84;
+		.hair
+		{
+			top: 10px + $translateY;
+			left: 60px;
+		}
+
+		.eyes
+		{
+			top: 67px + $translateY;
+			left: 114px;
+		}
+
+		.nose
+		{
+			top: 92px + $translateY;
+			left: 125px;
+		}
+
+		.mouth
+		{
+			top: 127px + $translateY;
+			left: 134px;
+		}
+		.skin
+		{
+			top: 152px;
+			left: 85px;
+			z-index: 0;
+		}		
+	}
+
+	&.female.child .avatar
+	{
+		$translateY: 222;
+		.hair
+		{
+			top: 10px + $translateY;
+			left: 60px;
+		}
+
+		.eyes
+		{
+			top: 67px + $translateY;
+			left: 114px;
+		}
+
+		.nose
+		{
+			top: 92px + $translateY;
+			left: 125px;
+		}
+
+		.mouth
+		{
+			top: 344px;
+			left: 134px;
+		}
+		.skin
+		{
+			top: 293px;
+			left: 95px;
+			z-index: 0;
+		}		
+	}
+
+	&.pet .avatar
+	{
+		.skin
+		{
+			top: 288px;
+			left: 95px;
+		}		
+	}
+
+	.tools
+	{
+		width: 430px !important;
+	}
+
+	.controls
+	{
+		hr
+		{
+			border: 2px solid #fff;
+			margin-top: -22px;
+			width: 240px;
+		}
+
+		button
+		{
+			border: none;
+			background: #fff;
+			color: $yellowBrand;
+			font-size: 24pt;
+			transition: 500ms;
+			border-radius: 50%;
+			padding: 5px;
+			margin: 0 10px;
+
+			&:hover, &.active
+			{
+				background: $yellowBrand;
+				color: #fff;
+			}
+		}
+	}
+
+	.ageControls
+	{
+		button
+		{
+			margin-top: 30px;
+			color: #0168B3;
+			width: 70px;
+			height: 70px;
+			vertical-align: top;
+			border-radius: 37%;
+			background-color: #F6DB50;
+			transition: 500ms;
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12);
+
+			&:hover
+			{
+				border-radius: 15%;
+				background-color: #3AA1CF;
+				color: #F6DB50;
+			}
+		}
+		.old
+		{
+			font-size: 45pt;
+		}
+		.teen
+		{
+			font-size: 36pt;
+		}
+		.child
+		{
+			font-size: 28pt;
+		}
+	}
+
+	.tabs
+	{
+		margin-bottom: 30px;
+
+		div
+		{
+			display: none;
+			&.active
+			{
+				display: block;
+			}
+		}
+
+		a
+		{
+			display: inline-block;
+			width: 110px;
+			vertical-align: top;
+			border: 3px solid #2471B2;
+			border-radius: 25px;
+			margin: 13px; 
+
+			&:hover, &.active
+			{
+				border: 3px solid $yellowBrand;
+			}
+		}
+
+		.skin
+		{
+			img
+			{
+				margin: 4px 0px 1px;
+			}
+		}
+
+		.hair,
+		.eyes,
+		.mouth,
+		.nose,
+		.tool,
+		.skin
+		{
+			img
+			{
+				width: 100px;
+			}
+		}
+	}
+}
+
+#preview
+{
+	button.icon
+	{
+		font-size: 45pt;
+		background-color: transparent;
+		color: $yellowBrand;
+		vertical-align: 203px;
+		transition: 500ms;
+		&:hover
+		{
+			color: #fff;
+		}
+	}
+
+	p
+	{
+		margin-bottom: 30px;
+	}
+
+	.compos
+	{
+		position: relative;
+		width: 782px;
+		height: 440px;
+		display: inline-block;
+		margin: auto;
+
+		img
+		{
+			position: absolute;
+		}
+		.base
+		{
+			top: 0;
+			left: 0;
+			height: 440px;
+			z-index: 0;
+		}
+		.ch
+		{
+			&.back
+			{
+				top: 95px;
+				width: 100px;
+				z-index: 1;
+			}
+			&.front
+			{
+				top: 95px;
+				width: 120px;
+				z-index: 2;
+			}
+		}
+	}
+}
+
+.mobile
+{
+	display: none;
+	a
+	{
+		border: 5px solid transparent;
+		border-radius: 15px;
+		margin: 10px;
+		display: inline-block;
+		padding: 10px;
+		transition: 500ms;
+		&.active,
+		&:hover
+		{
+			border: 5px solid $yellowBrand;
+		}
+	}
+}
+
+@media screen and (max-width: 1000px)
+{
+	.mobile
+	{
+		display: block;
+	}
+
+	.desktop
+	{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 500px)
+{
+
+
+	.edit .tools
+	{
+		width: 280px !important;
+	}
+
+	.edit .controls button
+	{
+		font-size: 16pt;
+	}
+
+	#share img
+	{
+		width: 260px;
+	}
+}
