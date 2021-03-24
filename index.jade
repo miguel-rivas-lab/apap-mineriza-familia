@@ -1,0 +1,95 @@
+doctype html
+html
+	head
+		include jade/metatags
+		include jade/common
+		+mainStyles
+	body
+		aside
+		main
+			header
+				img(src="img/logo.png")
+
+			section#home.active
+				.info
+					h1 ¡Mineriza a toda tu familia!
+					small registra tus datos para usar la aplicación
+					button.btn.next Comenzar
+				img(src="img/portada.png" alt="portada")
+
+			section#form
+				p Registra tus datos para usar la aplicación
+				form
+					label
+						span nombre:
+						input(type="text")
+					label
+						span apellido:
+						input(type="text")
+					label
+						span cédula:
+						input(type="text")
+					label
+						span teléfono:
+						input(type="text")
+					label
+						span e-mail:
+						input(type="text")
+					input(type="button", value="Registrar").btn.next
+
+			section#choose
+				p Agregar minero
+				small Seleccionalos haciendo click
+				.characters
+					button.male.icon
+					button.female.icon
+					button.pet.icon
+				button.btn Continuar
+
+			include jade/sections/maleChar
+			include jade/sections/femaleChar
+
+			section.edit.pet.child
+				.box.avatar
+					img(src="img/characters/pet/skin_01.png").skin
+				.box.tools
+					p Personaliza tus mineros
+					.tabPanel
+						.tabs
+							.skin.active
+								strong mascotas
+								a.active: img(src="img/characters/pet/skin_01_pv.png")
+								a: img(src="img/characters/pet/skin_02_pv.png")
+								a: img(src="img/characters/pet/skin_03_pv.png")
+
+					button.btn.cancel Cancelar
+					button.btn.add Agregar
+
+			section#preview
+				p Selecciona el fondo de tu preferencia
+
+				.desktop
+					button.icon.triangle-left
+					.compos: img(src="img/background/bk_01.png").base
+					button.icon.triangle-right
+
+				.mobile
+					a.active: img(src="img/background/bk_01_pv.png")
+					a: img(src="img/background/bk_02_pv.png")
+					a: img(src="img/background/bk_03_pv.png")
+
+				.controls
+					button.btn.back Volver
+					button.btn.next Finalizar
+
+			section#share
+				.box
+					img(src="img/family.png" alt="portada")
+				.box
+					p ¡Comparte tu familia minerizada y participa para ganar premios!
+					small o descarga la imagen como fondo de pantalla
+					button.btn.back Editar
+					button.btn Comparte
+					button.btn Descarga
+
+		+mainScripts
