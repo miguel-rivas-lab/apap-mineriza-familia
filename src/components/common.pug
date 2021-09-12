@@ -1,0 +1,98 @@
+mixin controls()
+	.controls
+		button.skin.icon.active
+		button.hair.icon
+		button.eyes.icon
+		button.nose.icon
+		button.mouth.icon
+		button.baby.icon
+		hr
+	.ageControls
+		button.male.icon.child
+		button.male.icon.teen
+		button.female.icon.adult
+		button.male.icon.old
+
+mixin skins(age)
+	img(src=`img/characters/skin_${age}_01.png`).skin.active
+	img(src=`img/characters/skin_${age}_02.png`).skin
+	img(src=`img/characters/skin_${age}_03.png`).skin
+
+mixin hair()
+	.hair
+		strong peinado
+		a: img(src="img/characters/hair_01.png")
+		a: img(src="img/characters/hair_02.png")
+		a: img(src="img/characters/hair_03.png")
+		a: img(src="img/characters/hair_04.png")
+		a: img(src="img/characters/hair_05.png")
+		a: img(src="img/characters/hair_06.png")
+		a: img(src="img/characters/hair_07.png")
+		a: img(src="img/characters/hair_08.png")
+		a: img(src="img/characters/hair_09.png")
+		a: img(src="img/characters/hair_10.png")
+		a: img(src="img/characters/hair_11.png")
+		a: img(src="img/characters/hair_12.png")
+		a: img(src="img/characters/hair_13.png")
+
+mixin nose()
+	.nose
+		strong nariz
+		a: img(src="img/characters/nose_01.png")
+		a: img(src="img/characters/nose_02.png")
+		a: img(src="img/characters/nose_03.png")
+
+mixin mouth()
+	.mouth
+		strong boca
+		a: img(src="img/characters/mouth_01.png")
+		a: img(src="img/characters/mouth_02.png")
+		a: img(src="img/characters/mouth_03.png")
+		a: img(src="img/characters/mouth_04.png")
+		a: img(src="img/characters/mouth_05.png")
+		a: img(src="img/characters/mouth_06.png")
+		a: img(src="img/characters/mouth_07.png")
+		a: img(src="img/characters/mouth_08.png")
+		a: img(src="img/characters/mouth_09.png")
+
+mixin eyes()
+	.eyes
+		strong ojos
+		a: img(src="img/characters/eyes_01.png")
+		a: img(src="img/characters/eyes_02.png")
+		a: img(src="img/characters/eyes_03.png")
+		a: img(src="img/characters/eyes_04.png")
+		a: img(src="img/characters/eyes_05.png")
+		a: img(src="img/characters/eyes_06.png")
+		a: img(src="img/characters/eyes_07.png")
+		a: img(src="img/characters/eyes_08.png")
+		a: img(src="img/characters/eyes_09.png")
+		a: img(src="img/characters/eyes_10.png")
+
+mixin skins-tools()
+	.skin.active
+		strong color de piel
+		a: img(src="img/color_01.png")
+		a: img(src="img/color_02.png")
+		a: img(src="img/color_03.png")
+
+mixin tools-tools()
+	.baby
+		strong accesorios
+		a: img(src="img/characters/tool_01.png")
+		a: img(src="img/characters/tool_02.png")
+
+mixin tools()
+	.box.tools
+			p Personaliza tus mineros
+			.tabPanel
+				.tabs
+					+skins-tools
+					+hair
+					+eyes
+					+nose
+					+mouth
+					+tools-tools
+				+controls
+			button.btn.cancel Cancelar
+			button.btn.add Agregar

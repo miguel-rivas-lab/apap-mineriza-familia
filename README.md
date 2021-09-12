@@ -1,1 +1,2 @@
-# APAP: Mineriza a tu familia
+# Webpack Boilerplate
+> version: 2021-09-12
