@@ -1,0 +1,33 @@
+#form {
+	form {
+		margin-top: 50px;
+	}
+
+	p {
+		max-width: 500px;
+		margin: auto;
+	}
+	label {
+		font-size: 0;
+		display: block;
+		margin: 20px;
+		letter-spacing: 1pt;
+	}
+	span {
+		font-size: 11pt;
+		background: #1461aa;
+		color: $yellowBrand;
+		text-transform: capitalize;
+		display: inline-block;
+		width: 140px;
+		padding: 8px 0;
+	}
+	input[type="text"] {
+		font-size: 11pt;
+		padding: 8px;
+		border: none;
+		width: 275px;
+		outline-color: $yellowBrand;
+		letter-spacing: 1pt;
+	}
+}

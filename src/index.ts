@@ -1,5 +1,4 @@
 import './stylesheets/application.scss';
-import * as $ from "jquery";
 
 /* eslint-disable @typescript-eslint/no-explicit-any*/
 

@@ -1,0 +1,26 @@
+#choose {
+	.characters {
+		margin-top: 30px;
+		button {
+			background: transparent;
+			color: $yellowBrand;
+			font-size: 110pt;
+			text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+			text-align: center;
+
+			&:hover {
+				text-shadow: 1px 0px 2px rgba(0, 0, 0, 0.25);
+				color: #42a3dc;
+			}
+
+			&.pet {
+				width: 88px;
+				height: 129px;
+				vertical-align: bottom;
+				&:before {
+					margin-left: -35px;
+				}
+			}
+		}
+	}
+}

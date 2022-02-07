@@ -1,0 +1,39 @@
+.mobile {
+  display: none;
+  a {
+    border: 5px solid transparent;
+    border-radius: 15px;
+    margin: 10px;
+    display: inline-block;
+    padding: 10px;
+    transition: 500ms;
+    &.active,
+    &:hover {
+      border: 5px solid $yellowBrand;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .edit .tools {
+    width: 280px !important;
+  }
+
+  .edit .controls button {
+    font-size: 16pt;
+  }
+
+  #share img {
+    width: 260px;
+  }
+}

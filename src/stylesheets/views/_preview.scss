@@ -1,0 +1,48 @@
+#preview {
+	button.icon {
+		font-size: 45pt;
+		background-color: transparent;
+		color: $yellowBrand;
+		vertical-align: 203px;
+		transition: 500ms;
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	p {
+		margin-bottom: 30px;
+	}
+
+	.compos {
+		position: relative;
+		width: 782px;
+		height: 440px;
+		display: inline-block;
+		margin: auto;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 440px;
+			z-index: 0;
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
+		.ch {
+			&.back {
+				top: 95px;
+				width: 100px;
+				z-index: 1;
+			}
+			&.front {
+				top: 95px;
+				width: 120px;
+				z-index: 2;
+			}
+		}
+	}
+}

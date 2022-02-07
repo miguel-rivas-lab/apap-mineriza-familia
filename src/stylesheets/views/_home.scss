@@ -1,0 +1,18 @@
+#home {
+	img {
+		position: fixed;
+		bottom: -100%;
+		right: 5%;
+		width: 95%;
+		z-index: -1;
+	}
+
+	h1 {
+		max-width: 570px;
+		margin: auto;
+	}
+
+	.info {
+		display: none;
+	}
+}

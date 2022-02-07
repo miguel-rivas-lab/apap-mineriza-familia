@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
 
 const pug = {
   test: /\.(pug|jade)$/,
@@ -90,6 +91,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve('src', 'index.pug'),
       inject: true,
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jQuery",
+      "window.jQuery": "jquery"
     }),
   ],
   devServer: {

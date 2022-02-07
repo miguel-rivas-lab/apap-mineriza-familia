@@ -1,0 +1,172 @@
+.edit {
+	.avatar {
+		margin-top: -80px;
+		width: 350px;
+		height: 600px;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		position: relative;
+
+		img {
+			position: absolute;
+			z-index: 3;
+		}
+
+		.skin {
+			top: 0;
+			left: 0;
+			z-index: 0;
+		}
+
+		.hair { left: 33px; }
+		.eyes { left: 63px; }
+		.nose { left: 100px; }
+		.mouth { left: 76px; }
+	}
+
+	&.male.old .avatar {
+		.hair { left: 37px; top: 12px; }
+		.eyes { left: 67px; top: 90px; }
+		.nose { left: 104px; top: 114px; }
+		.mouth { left: 81px; top: 131px; }
+	}
+
+	&.male.teen .avatar {
+		.hair { top: 83px; }
+		.eyes { top: 159px; }
+		.nose { left: 100px; top: 184px; }
+		.mouth { left: 77px; top: 195px; }
+	}
+
+	&.male.child .avatar {
+		.hair { left: 32px; top: 213px; }
+		.eyes { top: 293px; }
+		.nose { top: 316px; }
+		.mouth { top: 332px; }
+	}
+
+	&.female.adult .avatar {
+		.hair { left: 31px; top: 10px; }
+		.eyes { left: 61px; top: 87px; }
+		.nose { left: 98px; top: 112px; }
+		.mouth { left: 75px; top: 123px; }
+
+		.baby {
+			top: 173px;
+			left: 85px;
+		}
+	}
+
+	&.pet .avatar {
+		.skin {
+			top: 288px;
+			left: 95px;
+		}
+	}
+
+	.tools {
+		width: 430px !important;
+	}
+
+	.controls {
+		hr {
+			border: 2px solid #fff;
+			margin-top: -22px;
+			width: 280px;
+		}
+
+		button {
+			border: none;
+			background: #fff;
+			color: $yellowBrand;
+			font-size: 24pt;
+			transition: 500ms;
+			border-radius: 50%;
+			padding: 5px;
+			margin: 0 10px;
+
+			&:hover,
+			&.active {
+				background: $yellowBrand;
+				color: #fff;
+			}
+		}
+	}
+
+	.ageControls {
+		button {
+			margin: 30px 4px 0;
+			color: #0168b3;
+			width: 70px;
+			height: 70px;
+			vertical-align: top;
+			border-radius: 37%;
+			background-color: #f6db50;
+			transition: 500ms;
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+
+			&:hover {
+				border-radius: 15%;
+				background-color: #3aa1cf;
+				color: #f6db50;
+			}
+		}
+		.old {
+			font-size: 50pt;
+		}
+		.adult {
+			font-size: 40pt;
+		}
+		.teen {
+			font-size: 30pt;
+		}
+		.child {
+			font-size: 20pt;
+		}
+	}
+
+	.tabs {
+		margin-bottom: 30px;
+
+		div {
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
+
+		a {
+			display: inline-block;
+			width: 110px;
+			vertical-align: top;
+			border: 3px solid #2471b2;
+			border-radius: 25px;
+			margin: 13px;
+
+			&:hover,
+			&.active {
+				border: 3px solid $yellowBrand;
+			}
+		}
+
+		.skin {
+			img {
+				margin: 4px 0px 1px;
+			}
+		}
+
+		.hair,
+		.eyes,
+		.mouth,
+		.nose,
+		.baby,
+		.skin {
+			img {
+				width: 100px;
+			}
+		}
+	}
+}
